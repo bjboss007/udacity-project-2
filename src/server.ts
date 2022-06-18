@@ -33,7 +33,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   
   // Root Endpoint
 
-  app.get( "/", async ( req, res ) => {
+  app.get( "/", async ( req: express.Request, res: express.Response ) => {
 
       res.status(200).send({message:"Welcome to my image upload server"});
       return res;
@@ -41,7 +41,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   } );
   
   // Displays a simple message to the user
-  app.get( "/filteredimage", async ( req, res ) => {
+  app.get( "/filteredimage", async ( req: express.Request, res: express.Response ) => {
 
     try{
       let {image_url} = req.query;
