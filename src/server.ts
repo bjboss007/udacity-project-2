@@ -32,6 +32,14 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   //! END @TODO1
   
   // Root Endpoint
+
+  app.get( "/", async ( req, res ) => {
+
+      res.status(200).send({message:"Welcome to my image upload server"});
+      return res;
+    
+  } );
+  
   // Displays a simple message to the user
   app.get( "/filteredimage", async ( req, res ) => {
 
